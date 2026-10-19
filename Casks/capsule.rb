@@ -1,6 +1,6 @@
 cask "capsule" do
-  version "0.3.0"
-  sha256 "baad291d48f0829e20d1fa11b832d5daf079bd894093cf9b057cb5ee773117c0"
+  version "0.4.0"
+  sha256 "56fea1c0cb72513dd9f75799aeae943ab774195d860e913a105952576e3f8781"
 
   url "https://github.com/antick/capsule/releases/download/v#{version}/Capsule-#{version}-arm64.zip"
   name "Capsule"
@@ -12,6 +12,7 @@ cask "capsule" do
   depends_on macos: :sonoma
 
   app "Capsule.app"
+  binary "#{appdir}/Capsule.app/Contents/Helpers/capsule"
 
   uninstall quit: "com.antick.capsule"
 
